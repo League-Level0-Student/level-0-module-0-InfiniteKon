@@ -1,54 +1,50 @@
-package _02_code_flow._3_pentagon_crazy;
+package _02_code_flow._2_robot_spiral;
 /*
  *    Copyright (c) The League of Amazing Programmers 2013-2020
  *    Level 0
  */
 
-import org.jointheleague.graphical.robot.Robot;
-import java.awt.Color;
 
-public class PentagonCrazy {
-	
+import org.jointheleague.graphical.robot.Robot;
+
+public class RobotSpiral {
+
 	public static void main(String[] args) {
 		
-		//  Create a new Robot
+		// Create a new Robot
+		Robot e = new Robot();
+		// Set your robot's pen down 
+		e.penDown();
+		// SPEED. Set the robot to go at max speed (100)
+e.setSpeed(100);
+		// COUNT. Create an int variable that will count how many lines of the spiral we have drawn.
+			//        Start its value as zero.
+int count = 0;
+		// LOOP. Start a while loop to repeat the COLOR, DRAW, TURN, and COUNT code below until 50 lines have been drawn
+while (count < 50 ) {
+	e.setRandomPenColor();
+	e.move(5*count);
+	e.turn(360/7);
+	count+=1;
+	e.setPenWidth(count);
+}
+			// COLOR.   Have the robot set a random pen color:      setRandomPenColor()
 
-		//  Put the robot's pen down
+			// DRAW.    Move the robot (5*count) pixels
+			//          count is the name of the variable you created earlier
 
-		//  SPEED. Make the robot go at maximum speed (100)
+			// TURN.    Turn the robot (360/7) degrees to the right
 
-		//  COLOR. Set the pen to a color that you like for the shape
+			// COUNT.   Increase the count of how many lines have been drawn so far ( count+=1 )
 
-		//  NUMBER OF SIDES. Make an int variable for the number of sides the shape will have.
-		//  				(Hint: its called PentagonCrazy)
+			// Change the robot pen width to the current value of the count variable 
 
-		//  TURN ANGLE. Make another int variable for the angle the robot must turn. 
-		//  			Hint: Divide 360 by the number of sides the shape has to get the angle.
-		
-		//  COUNT. Make another int variable to count how many times the loop has repeated
-		//         Set its start value to zero.
 
-		//  LOOP. Start a while loop to repeat the DRAW, TURN, and INCREASE COUNT code 200 times. 
-		
-				//  DRAW.  Make the robot move the amount in your count variable
-		
-				//  TURN.  Turn the robot the amount in your angle variable + 1
-
-				//  INCREASE COUNT. Increase the count by 1
-		
 		//  End the while loop here
 
-		//  Now hide the robot so you can see the pattern it has drawn.
 		
-		//  Run the program. 
-		//  Check the pattern against the picture in the recipe. If it matches, you are done!
-	
-
-	
-	// Variations:
-	// *12. make the pattern really huge
-	// *13. randomize the color of the pattern 
-	// *14. experiment with different shapes
-
+		// Run the program. 
+		// Check the pattern against the picture in the recipe. If it matches, you are done!
+		
 	}
 }
